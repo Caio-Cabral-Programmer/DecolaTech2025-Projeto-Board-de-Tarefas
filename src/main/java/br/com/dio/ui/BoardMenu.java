@@ -36,7 +36,7 @@ public class BoardMenu {
                 System.out.println("7 - Ver coluna com cards");
                 System.out.println("8 - Ver card");
                 System.out.println("9 - Voltar para o menu anterior um card");
-                System.out.println("10 - Sair");
+                // System.out.println("10 - Sair"); → Desnecessário, já que o usuário pode voltar para o menu anterior e sair por ele.
                 option = scanner.nextInt();
                 switch (option) {
                     case 1 -> createCard();
@@ -48,13 +48,13 @@ public class BoardMenu {
                     case 7 -> showColumn();
                     case 8 -> showCard();
                     case 9 -> System.out.println("Voltando para o menu anterior");
-                    case 10 -> System.exit(0);
-                    default -> System.out.println("Opção inválida, informe uma opção do menu");
+                    // case 10 -> System.exit(0); → Desnecessário, já que o usuário pode voltar para o menu anterior e sair por ele.
+                    default -> System.out.println("Opção inválida, informe uma opção do menu:1");
                 }
             }
         }catch (SQLException ex){
             ex.printStackTrace();
-            System.exit(0);
+            // System.exit(0); → Saída abrupta depois de um erro sem necessidade. Também desnecessário, já que o usuário pode voltar para o menu anterior e sair por ele.
         }
     }
 
@@ -71,7 +71,7 @@ public class BoardMenu {
     }
 
     private void moveCardToNextColumn() throws SQLException {
-        System.out.println("Informe o id do card que deseja mover para a próxima coluna");
+        System.out.println("Informe o id do card que deseja mover para a próxima coluna:");
         var cardId = scanner.nextLong();
         var boardColumnsInfo = entity.getBoardColumns().stream()
                 .map(bc -> new BoardColumnInfoDTO(bc.getId(), bc.getOrder(), bc.getKind()))
