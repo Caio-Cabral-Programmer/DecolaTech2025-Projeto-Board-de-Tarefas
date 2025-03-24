@@ -140,7 +140,7 @@ public class BoardMenu {
         var columnsIds = entity.getBoardColumns().stream().map(BoardColumnEntity::getId).toList();
         var selectedColumnId = -1L;
         while (!columnsIds.contains(selectedColumnId)){
-            System.out.printf("Escolha uma coluna do board %s pelo id\n", entity.getName());
+            System.out.printf("Escolha uma coluna do board %s pelo id:\n", entity.getName());
             entity.getBoardColumns().forEach(c -> System.out.printf("%s - %s [%s]\n", c.getId(), c.getName(), c.getKind()));
             selectedColumnId = scanner.nextLong();
         }
@@ -155,7 +155,7 @@ public class BoardMenu {
     }
 
     private void showCard() throws SQLException {
-        System.out.println("Informe o id do card que deseja visualizar");
+        System.out.println("Informe o id do card que deseja visualizar:");
         var selectedCardId = scanner.nextLong();
         try(var connection  = getConnection()){
             new CardQueryService(connection).findById(selectedCardId)
