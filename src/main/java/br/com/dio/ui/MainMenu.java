@@ -94,7 +94,7 @@ public class MainMenu {
     }
 
     private void deleteBoard() throws SQLException {
-        System.out.println("Informe o id do board que será excluido:");
+        System.out.println("Informe o id do board que será excluído:");
         var id = scanner.nextLong();
         try(var connection = getConnection()){
             var service = new BoardService(connection);
