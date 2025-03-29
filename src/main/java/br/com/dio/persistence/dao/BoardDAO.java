@@ -50,11 +50,11 @@ public class BoardDAO {
     }
 
     public boolean exists(final Long id) throws SQLException {
-        var sql = "SELECT 1 FROM BOARDS WHERE id = ?;";
-        try(var statement = connection.prepareStatement(sql)){
-            statement.setLong(1, id);
-            statement.executeQuery();
-            return statement.getResultSet().next();
+                var sql = "SELECT 1 FROM BOARDS WHERE id = ?;";
+                try(var statement = connection.prepareStatement(sql)){
+                    statement.setLong(1, id);
+                    statement.executeQuery();
+                    return statement.getResultSet().next();
         }
     }
 
