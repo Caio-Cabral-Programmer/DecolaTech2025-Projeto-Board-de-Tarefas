@@ -27,7 +27,7 @@ public class MigrationStrategy {
             System.setErr(new PrintStream(fos));
             try(
                     var connection = getConnection();
-                    var jdbcConnection = new JdbcConnection(connection);
+                    var jdbcConnection = new JdbcConnection(connection); // Conversão necessária, pois este é o formato que o liquibase aceita.
             ){
                 var liquibase = new Liquibase(
                         "/db/changelog/db.changelog-master.yml",
