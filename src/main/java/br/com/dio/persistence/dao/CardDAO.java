@@ -68,12 +68,12 @@ public class CardDAO {
             statement.executeQuery();
             var resultSet = statement.getResultSet();
             if (resultSet.next()){
-                var dto = new CardDetailsDTO(
+                var dto = new CardDetailsDTO( // Estão sendo colocados os valores na mesma sequência de campos do CardDetailsDTO, mas os valores são obtidos de diferentes colunas do banco de dados.
                         resultSet.getLong("c.id"),
                         resultSet.getString("c.title"),
                         resultSet.getString("c.description"),
-                        nonNull(resultSet.getString("b.block_reason")),
-                        toOffsetDateTime(resultSet.getTimestamp("b.blocked_at")),
+                        nonNull(resultSet.getString("b.block_reason")), // Este method verifica se o valor passado como argumento não é nulo e retorna true ou false. O resultado final desta linha é um valor booleano que indica se existe uma razão de bloqueio para o card. Este valor será usado para definir o campo blocked no DTO, indicando se o card está bloqueado ou não.
+                        toOffsetDateTime(resultSet.getTimestamp("b.blocked_at")), // O method toOffsetDateTime está convertendo o formato de data/hora do banco de dados para um formato mais rico e fácil de manipular no Java moderno.
                         resultSet.getString("b.block_reason"),
                         resultSet.getInt("blocks_amount"),
                         resultSet.getLong("c.board_column_id"),

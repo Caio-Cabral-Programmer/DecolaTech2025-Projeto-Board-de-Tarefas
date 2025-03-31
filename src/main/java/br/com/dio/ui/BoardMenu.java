@@ -137,7 +137,7 @@ public class BoardMenu {
     }
 
     private void showColumn() throws SQLException {
-        var columnsIds = entity.getBoardColumns().stream().map(BoardColumnEntity::getId).toList();
+        var columnsIds = entity.getBoardColumns().stream().map(BoardColumnEntity::getId).toList(); // .map(BoardColumnEntity::getId) é o mesmo que → .map(column -> column.getId())
         var selectedColumnId = -1L;
         while (!columnsIds.contains(selectedColumnId)){
             System.out.printf("Escolha uma coluna do board %s pelo id:\n", entity.getName());
