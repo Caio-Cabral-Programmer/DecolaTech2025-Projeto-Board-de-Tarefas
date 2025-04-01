@@ -148,7 +148,7 @@ public class BoardMenu {
             var column = new BoardColumnQueryService(connection).findById(selectedColumnId);
             column.ifPresent(co -> {
                 System.out.printf("Coluna %s tipo %s\n", co.getName(), co.getKind());
-                co.getCards().forEach(ca -> System.out.printf("Card %s - %s\nDescrição: %s",
+                co.getCards().forEach(ca -> System.out.printf("Card %s - %s\nDescrição: %s\n", // Erro corrigido: faltava \n para pular uma linha e separar do menu.
                         ca.getId(), ca.getTitle(), ca.getDescription()));
             });
         }
