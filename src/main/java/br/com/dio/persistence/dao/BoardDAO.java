@@ -1,11 +1,14 @@
 package br.com.dio.persistence.dao;
 
+
 import br.com.dio.persistence.entity.BoardEntity;
 import com.mysql.cj.jdbc.StatementImpl;
 import lombok.AllArgsConstructor;
 
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 @AllArgsConstructor
@@ -50,12 +53,31 @@ public class BoardDAO {
     }
 
     public boolean exists(final Long id) throws SQLException {
-                var sql = "SELECT 1 FROM BOARDS WHERE id = ?;";
-                try(var statement = connection.prepareStatement(sql)){
-                    statement.setLong(1, id);
-                    statement.executeQuery();
-                    return statement.getResultSet().next();
+        var sql = "SELECT 1 FROM BOARDS WHERE id = ?;";
+        try(var statement = connection.prepareStatement(sql)){
+            statement.setLong(1, id);
+            statement.executeQuery();
+            return statement.getResultSet().next();
         }
     }
 
+    public List<BoardEntity> findAll() throws SQLException {
+        var sql = "SELECT id, name FROM BOARDS ORDER BY id;";
+        List<BoardEntity> boards = new ArrayList<>();
+
+        try(var statement = connection.prepareStatement(sql)){
+            statement.executeQuery();
+            var resultSet = statement.getResultSet();
+
+            while (resultSet.next()){
+                var entity = new BoardEntity();
+                entity.setId(resultSet.getLong("id"));
+                entity.setName(resultSet.getString("name"));
+                boards.add(entity);
+            }
+        }
+
+        return boards; // Retorna uma lista de BoardEntity contendo todos os boards.
+    }
 }
+
