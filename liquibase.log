@@ -1,17 +1,17 @@
-abr. 01, 2025 9:01:23 AM liquibase.changelog
+abr. 03, 2025 2:02:53 PM liquibase.changelog
 INFORMAÇÕES: Reading resource: db/changelog/migrations/db.changelog-202408191938.sql
-abr. 01, 2025 9:01:23 AM liquibase.changelog
+abr. 03, 2025 2:02:53 PM liquibase.changelog
 INFORMAÇÕES: Reading resource: db/changelog/migrations/db.changelog-202408210954.sql
-abr. 01, 2025 9:01:23 AM liquibase.changelog
+abr. 03, 2025 2:02:53 PM liquibase.changelog
 INFORMAÇÕES: Reading resource: db/changelog/migrations/db.changelog-202408211004.sql
-abr. 01, 2025 9:01:23 AM liquibase.changelog
+abr. 03, 2025 2:02:53 PM liquibase.changelog
 INFORMAÇÕES: Reading resource: db/changelog/migrations/db.changelog-202408211005.sql
-abr. 01, 2025 9:01:23 AM liquibase.changelog
+abr. 03, 2025 2:02:53 PM liquibase.changelog
 INFORMAÇÕES: Reading resource: db/changelog/migrations/db.changelog-202408281807.sql
-abr. 01, 2025 9:01:23 AM liquibase.changelog
+abr. 03, 2025 2:02:53 PM liquibase.changelog
 INFORMAÇÕES: Reading from board.databasechangelog
 Database is up to date, no changesets to execute
-abr. 01, 2025 9:01:23 AM liquibase.changelog
+abr. 03, 2025 2:02:53 PM liquibase.changelog
 INFORMAÇÕES: Reading from board.databasechangelog
 
 UPDATE SUMMARY
@@ -21,21 +21,21 @@ Filtered out:                 0
 -------------------------------
 Total change sets:            5
 
-abr. 01, 2025 9:01:23 AM liquibase.util
+abr. 03, 2025 2:02:53 PM liquibase.util
 INFORMAÇÕES: UPDATE SUMMARY
-abr. 01, 2025 9:01:23 AM liquibase.util
+abr. 03, 2025 2:02:53 PM liquibase.util
 INFORMAÇÕES: Run:                          0
-abr. 01, 2025 9:01:23 AM liquibase.util
+abr. 03, 2025 2:02:53 PM liquibase.util
 INFORMAÇÕES: Previously run:               5
-abr. 01, 2025 9:01:23 AM liquibase.util
+abr. 03, 2025 2:02:53 PM liquibase.util
 INFORMAÇÕES: Filtered out:                 0
-abr. 01, 2025 9:01:23 AM liquibase.util
+abr. 03, 2025 2:02:53 PM liquibase.util
 INFORMAÇÕES: -------------------------------
-abr. 01, 2025 9:01:23 AM liquibase.util
+abr. 03, 2025 2:02:53 PM liquibase.util
 INFORMAÇÕES: Total change sets:            5
-abr. 01, 2025 9:01:23 AM liquibase.util
+abr. 03, 2025 2:02:53 PM liquibase.util
 INFORMAÇÕES: Update summary generated
-abr. 01, 2025 9:01:23 AM liquibase.lockservice
+abr. 03, 2025 2:02:53 PM liquibase.lockservice
 INFORMAÇÕES: Successfully released change log lock
-abr. 01, 2025 9:01:23 AM liquibase.command
+abr. 03, 2025 2:02:53 PM liquibase.command
 INFORMAÇÕES: Command execution complete
